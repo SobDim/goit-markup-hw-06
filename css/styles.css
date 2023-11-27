@@ -91,7 +91,7 @@ body {
   font-size: 16px;
 }
 
-/* флекс контейнери */
+/*  контейнери */
 .container {
   display: flex;
   width: 1158px;
@@ -101,6 +101,11 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+/* Tablet screen */
+@media only screen and (min-width: ) {
+}
+/* Desctop screen */
+
 /* 
 ХЕДЕР 
 */
@@ -561,8 +566,8 @@ Subscribe
 }
 /*<!--=========== /SECTION PORTFOLIO=================-->*/
 
-/*ss 
-кнопки */
+/* <!--=========== SECTION кнопки=================-->*/
+
 .button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -666,7 +671,11 @@ Subscribe
 .sbcs-btn:focus {
   background-color: var(--green);
 }
-/* заголовки 2 */
+
+/*<!--=========== /SECTION кнопки=================-->*/
+
+/* <!--=========== SECTION заголовки 2=================-->*/
+
 .section-title {
   color: var(--navy-blue);
   text-align: center;
@@ -692,6 +701,7 @@ Subscribe
   color: var(--slate);
 }
 
+/*<!--=========== /SECTION заголовки 2=================-->*/
 /* 
 
 Modal
