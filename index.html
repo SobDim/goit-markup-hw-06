@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header hide">
       <div class="container">
         <!-- navigation -->
 
@@ -449,7 +449,7 @@
       <!-- 
         section 5   
       -->
-      <section class="customers section">
+      <section class="customers section hide">
         <div class="container">
           <h2 class="section-title">Customers</h2>
 
@@ -528,8 +528,8 @@
 
     <!--=========== FOOTER =================-->
 
-    <footer class="footer">
-      <div class="container">
+    <footer class="footer hide">
+      <div class="container footer-container">
         <div class="footer-right">
           <a class="footer-logo logo link" href="./index.html"
             >Web<span class="logo-studio">Studio</span></a
@@ -542,7 +542,7 @@
         </div>
         <div class="footer-social">
           <p class="social-text">Social media</p>
-          <ul class="list team-social">
+          <ul class="list team-social footer-social">
             <li class="social-item">
               <a class="social-link" href="#" target="_blank" rel="Instagram">
                 <svg class="social-icon" width="24" height="24">
@@ -698,3 +698,51 @@
 </html>
 
 <!--========== /MODAL =================-->
+
+<!--===========  MOBILE MENU===========-->
+<div class="hide menu-container js-menu-container" id="mobile-menu">
+  <button type="button" class="menu-toggle js-close-menu">
+    <svg class="mobile-menu-close" width="8px" height="8px">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <ul class="mobile-menu">
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link" href="">Career</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link" href="">About</a>
+    </li>
+    <li class="mobile-menu-item">
+      <a class="mobile-menu-link" href="">Products</a>
+    </li>
+  </ul>
+  <ul class="list team-social mobile-social">
+    <li class="social-item">
+      <a class="social-link" href="#" target="_blank" rel="Instagram">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-instagram-2"></use></svg
+      ></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#" target="_blank" rel="twitter">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-twitter-1"></use></svg
+      ></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-facebook-1"></use></svg
+      ></a>
+    </li>
+    <li class="social-item">
+      <a class="social-link" href="#" target="_blank" rel="noopener noreferrer">
+        <svg class="social-icon" width="24" height="24">
+          <use href="./images/icons.svg#icon-linkedin-1"></use></svg
+      ></a>
+    </li>
+  </ul>
+</div>
+<!--========== / MOBILE MENU===========-->
