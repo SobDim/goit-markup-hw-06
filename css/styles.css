@@ -29,15 +29,6 @@ Light mode Dialogs/alerts */
 скидання стилів і приховування заголовків 
 */
 
-html {
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 h1,
 h2,
 h3,
@@ -51,6 +42,7 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .list {
@@ -63,9 +55,9 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
 }
-.contacts {
+/* .contacts {
   text-decoration: none;
-}
+} */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -95,7 +87,6 @@ body {
   display: none;
 }
 /*  контейнери */
-/* Mobile screen*/
 
 .container {
   min-width: 320px;
@@ -196,7 +187,6 @@ body {
 
 @media only screen and (min-width: 768px) {
   .site-nav {
-    /* display: flex; */
     gap: 40px;
   }
 }
@@ -215,7 +205,7 @@ body {
   .contacts-link {
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.17; /* 116.667% */
+    line-height: 1.17;
     letter-spacing: 0.04em;
   }
 }
@@ -281,14 +271,12 @@ body {
   .nav {
     display: flex;
     align-items: center;
-    /* width: 100%; */
   }
 }
 
 /* HERO */
 
 .hero {
-  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
   background-color: var(--navy-blue);
@@ -298,7 +286,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url('../images/hero.jpg');
+    url('../images/hero-mobile-1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -307,6 +295,67 @@ body {
   color: var(--white);
 }
 
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-mobile-2x.jpg');
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-tablet-1x.jpg');
+  }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-tablet-2x.jpg');
+  }
+}
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-descktop-1x.jpg');
+  }
+
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/hero-descktop-2x.jpg');
+  }
+}
+}
 .hero-title {
   font-size: 36px;
   font-weight: 700;
@@ -445,7 +494,6 @@ SECTION3
   column-gap: 24px;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 
 .team-worker {
@@ -794,23 +842,39 @@ Subscribe
 
 /* <!--=========== SECTION PORTFOLIO=================-->*/
 
-.container.buttons {
-  flex-direction: column;
-}
 .section.filter {
   padding-top: 96px;
   padding-bottom: 120px;
 }
+
 .button-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 24px;
   justify-content: center;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .button-list {
+    flex-wrap: nowrap;
+    margin-bottom: 64px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .button-list {
+    margin-bottom: 72px;
+  }
 }
 
 .container.buttons {
   justify-content: center;
+}
+.container.exampl {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
 }
 .exampl-list {
   display: flex;
@@ -818,8 +882,20 @@ Subscribe
   row-gap: 48px;
   column-gap: 24px;
 }
-.exampl-list li {
-  width: calc((100% - 48px) / 3);
+.exampl-item {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .exampl-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .exampl-item {
+    width: calc((100% - 48px) / 3);
+  }
 }
 
 .exampl-cont {
@@ -890,13 +966,19 @@ Subscribe
 
 .secondary.button {
   background-color: var(--cloud);
-  padding: 12px 24px;
+  padding: 8px 16px;
   color: var(--iris);
   border: 1px solid var(--cornflower);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .secondary.button {
+    padding: 12px 24px;
+  }
 }
 
 .secondary.button:hover,
@@ -1031,13 +1113,20 @@ Modal
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 408px;
+  width: 320px;
+
   min-height: 584px;
   background-color: var(--dairy);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
 }
 
 .overlay.is-hidden {
@@ -1187,7 +1276,7 @@ Modal
   padding: 80px 35px 40px 40px;
   width: 100vw;
   height: 100vh;
-  background-color: var(--cloud);
+  background-color: #ffffff;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -1195,7 +1284,11 @@ Modal
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-toggle {
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.mob-close {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -1208,7 +1301,7 @@ Modal
   stroke-width: 1px;
   border: 1px solid;
   stroke: var(--navy-blue-modal);
-  background-color: var(--cornflower);
+  background-color: transparent;
 
   border: 1px solid var(--navy-blue-modal);
   cursor: pointer;
@@ -1220,8 +1313,8 @@ Modal
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus {
+.mob-close:hover,
+.mob-close:focus {
   border: none;
   background-color: var(--ocean);
   fill: var(--white);
@@ -1253,15 +1346,17 @@ Modal
   color: var(--ocean);
 }
 
-/* .mobile-menu-adreses {
+.mobile-menu-adreses {
+  margin-bottom: 48px;
 }
 .mobile-contact {
+  margin-bottom: 40px;
 }
-.list {
+/*.list {
 } */
 
 .mobile-social {
-  gap: 56px;
+  justify-content: space-between;
   margin: 0;
 }
 .mobile-contact-adres {

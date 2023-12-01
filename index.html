@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -62,7 +64,12 @@
             </li>
           </ul>
         </address>
-        <button class="mobile-menu-btn"  type="button" js-open-menu>
+        <button
+          class="mobile-menu-btn js-open-menu menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg class="mobile-menu-icon" width="32" height="22">
             <use href="./images/icons.svg#icon-menu-hamburger"></use>
           </svg>
@@ -144,6 +151,10 @@
       </section>
       <!-- 
         section 3
+
+srcset="./images/02-work/work-01-2x.jpg 2x" 
+src="./images/02-work/work-01-1x.jpg" alt="computer-monitor" width="360">
+
       -->
       <section class="products section">
         <div class="container">
@@ -152,7 +163,8 @@
             <li class="products-item">
               <img
                 class="products-list-img"
-                src="./images/img-1.jpg"
+                srcset="./images/img-1-2x.jpg 2x"
+                src="./images/img-1-1x.jpg"
                 alt="monitor"
                 width="360"
               />
@@ -160,7 +172,8 @@
             <li class="products-item">
               <img
                 class="products-list-img"
-                src="./images/img-2.jpg"
+                srcset="./images/img-2-2x.jpg 2x"
+                src="./images/img-2-1x.jpg"
                 alt="mobile phone"
                 width="360"
               />
@@ -168,7 +181,8 @@
             <li class="products-item">
               <img
                 class="products-list-img"
-                src="./images/img-3.jpg"
+                srcset="./images/img-3-2x.jpg 2x"
+                src="./images/img-3-1x.jpg"
                 alt="web applications"
                 width="360"
               />
@@ -186,7 +200,9 @@
           <ul class="team-list flex-list list">
             <li class="team-worker">
               <img
+                srcset=""
                 class="team-worker-img"
+                srcset="./images/Team-Card-1@2x.jpg 2x"
                 src="./images/Team-Card-1.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -253,6 +269,7 @@
             <li class="team-worker">
               <img
                 class="team-list-img"
+                srcset="./images/Team-Card-2@2x.jpg 2x"
                 src="./images/Team-Card-2.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -319,6 +336,7 @@
             <li class="team-worker">
               <img
                 class="team-list-img"
+                srcset="./images/Team-Card-3@2x.jpg 2x"
                 src="./images/Team-Card-3.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -385,6 +403,7 @@
             <li class="team-worker">
               <img
                 class="team-list-img"
+                srcset="./images/Team-Card-4@2x.jpg 2x"
                 src="./images/Team-Card-4.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -698,12 +717,11 @@
       </div>
     </div>
 
-
     <!--========== /MODAL =================-->
 
     <!--===========  MOBILE MENU===========-->
     <div class="menu-container js-menu-container" id="mobile-menu">
-      <button type="button" class="menu-toggle js-close-menu">
+      <button class="mob-close menu-toggle js-close-menu" type="button">
         <svg class="mobile-menu-close" width="8px" height="8px">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -711,21 +729,25 @@
 
       <ul class="list mobile-menu">
         <li class="mobile-menu-item">
-          <a class="link mobile-menu-link curent" href="">Studio</a>
+          <a class="link mobile-menu-link curent" href="./index.html">Studio</a>
         </li>
         <li class="mobile-menu-item">
-          <a class="link mobile-menu-link" href="">Portfolio</a>
+          <a class="link mobile-menu-link" href="./portfolio.html">Portfolio</a>
         </li>
         <li class="mobile-menu-item">
           <a class="link mobile-menu-link" href="">Contacts</a>
         </li>
       </ul>
       <ul class="list mobile-menu-adreses">
-        <li class=" mobile-contact">
-          <a class="link mobile-contact-adres curent" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        <li class="mobile-contact">
+          <a class="link mobile-contact-adres curent" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
         </li>
-        <li class=" mobile-contact">
-          <a class="link mobile-contact-adres" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        <li class="mobile-contact">
+          <a class="link mobile-contact-adres" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
         </li>
       </ul>
       <ul class="list team-social mobile-social">
@@ -754,7 +776,7 @@
         </li>
         <li class="social-item">
           <a
-            class="link  social-link"
+            class="link social-link"
             href="#"
             target="_blank"
             rel="noopener noreferrer"
@@ -767,11 +789,10 @@
     </div>
     <!--========== / MOBILE MENU===========-->
 
-<!--=========== SECTION SCRIPTS===========-->
+    <!--=========== SECTION SCRIPTS===========-->
 
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
-<!--========== /SECTION ===========-->
-
+    <!--========== /SECTION ===========-->
   </body>
 </html>
