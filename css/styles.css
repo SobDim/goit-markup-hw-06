@@ -90,7 +90,7 @@ body {
 
 .container {
   min-width: 320px;
-  padding: 0 20px;
+  padding: 0 16px;
   margin: 0 auto;
   letter-spacing: 0.02em;
 }
@@ -278,7 +278,9 @@ body {
 
 .hero {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
+  padding: 112px 0;
   background-color: var(--navy-blue);
 
   background-image: linear-gradient(
@@ -372,14 +374,14 @@ body {
   }
 }
 
-.hero .container {
+.hero  {
   flex-direction: column;
   align-items: center;
-  padding: 112px 0;
+  
 }
 
 @media only screen and (min-width: 1158px) {
-  .hero .container {
+  .hero  {
     padding: 188px 0;
   }
 }
@@ -596,6 +598,7 @@ SECTION3
 
 @media only screen and (min-width: 768px) {
   .customers-item {
+
     width: calc((100% - 48px) / 3);
   }
 }
@@ -613,6 +616,13 @@ SECTION3
   row-gap: 72px;
 }
 
+@media only screen and (min-width: 768px) {
+  .customers-list 
+   {
+    column-gap: 24px;
+
+  }
+}
 .customers-link {
   display: flex;
   align-items: center;
@@ -651,7 +661,7 @@ SECTION3
   color: var(--cloud);
 }
 .footer-container {
-  display: block;
+  /* display: block; */
   text-align: center;
   align-items: baseline;
 
@@ -669,7 +679,7 @@ SECTION3
     column-gap: 24px;
     width: 552px;
     text-align: start;
-    display: flex;
+    display: flex;footer-right
     flex-wrap: wrap;
   }
 }
@@ -681,14 +691,15 @@ SECTION3
   }
 }
 
-.footer-right {
-  display: block;
+.footer-left {
+  
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 72px;
 }
 
 @media only screen and (min-width: 768px) {
-  .footer-right {
+  .footer-left {
     display: flex;
     flex-direction: column;
     width: 264px;
@@ -705,7 +716,7 @@ SECTION3
 .footer-text {
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 72px;
+  
   /* width: 264px; */
 }
 @media only screen and (min-width: 768px) {
@@ -714,7 +725,7 @@ SECTION3
   }
 }
 
-/* .footer-right {
+/* .footer-left {
   display: flex;
   margin: 0 auto;} */
 
@@ -725,16 +736,14 @@ SECTION3
   .footer {
     padding: 100px 0;
   }
-  .footer-right {
+  .footer-left {
     margin-right: 120px;
   }
 
   .footer-text {
     width: 264px;
   }
-  .footer-social {
-    margin-right: 80px;
-  }
+
 }
 /* 
 Social media
@@ -753,7 +762,7 @@ Social media
 }
 @media only screen and (min-width: 1158px) {
   .footer-social {
-    margin-right: 40px;
+    margin-right: auto;
   }
 }
 
@@ -789,23 +798,23 @@ Subscribe
   }
 }
 
-.footer-sbsc {
+/* .footer-sbsc {
   display: block;
-}
+} */
 @media only screen and (min-width: 768px) {
   .sbsc-form {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    width: 537px;
+    /* width: 537px; */
     gap: 24px;
   }
 }
-@media only screen and (min-width: 1158px) {
+/* @media only screen and (min-width: 1158px) {
   .sbsc-form {
     width: 264px;
   }
-}
+} */
 
 .sbcs-input {
   display: inline-block;
@@ -1077,6 +1086,28 @@ Subscribe
   margin-bottom: 72px;
 }
 /* заголовки 3 */
+
+
+.feature-item .list-title {
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1,11; /* 111.111% */
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+  .feature-item .list-title {
+  text-align: start;}
+}
+
+
+
 .list-title {
   color: var(--navy-blue);
   font-size: 20px;
@@ -1084,6 +1115,10 @@ Subscribe
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
+
+
+
+
 /* заголовки 4 */
 .list-text {
   letter-spacing: 0.32px;
@@ -1113,8 +1148,8 @@ Modal
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 320px;
-
+  width: 95%;
+max-width: 392px;
   min-height: 584px;
   background-color: var(--dairy);
   border-radius: 4px;
@@ -1367,6 +1402,11 @@ Modal
   line-height: 1.2; /* 120% */
   letter-spacing: 0.02em;
 }
+@media only screen and (max-width: 428px) {
+  .mobile-contact-adres.curent {
+    font-size: 20px;
+  }
+}
 .curent {
   color: var(--iris);
   font-size: 36px;
@@ -1375,6 +1415,10 @@ Modal
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
+
+
+
+
 /* .social-item {
 }
 .social-link {
